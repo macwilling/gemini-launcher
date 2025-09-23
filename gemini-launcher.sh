@@ -10,7 +10,15 @@ MP_RED='\033[0;31m'
 NC='\033[0m'
 
 # --- Configuration ---
-BASE_PATH='/Users/macw/Library/CloudStorage/Dropbox/Mac (2)/Documents/GitHub/acst'
+# Source the configuration file
+CONFIG_FILE="$(dirname "$0")/config"
+if [[ ! -f "$CONFIG_FILE" ]]; then
+  echo -e "${MP_RED}Error: Configuration file not found at ${CONFIG_FILE}.${NC}"
+  echo "Please create a 'config' file and set the BASE_PATH variable."
+  exit 1
+fi
+source "$CONFIG_FILE"
+
 
 # --- Functions ---
 check_dependencies() {
