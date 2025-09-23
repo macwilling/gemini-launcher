@@ -10,8 +10,9 @@ MP_RED='\033[0;31m'
 NC='\033[0m'
 
 # --- Configuration ---
-# Source the configuration file
-CONFIG_FILE="$(dirname "$0")/config"
+# Get the absolute path to the script's directory, even when using an alias
+SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
+CONFIG_FILE="$SCRIPT_DIR/config"
 if [[ ! -f "$CONFIG_FILE" ]]; then
   echo -e "${MP_RED}Error: Configuration file not found at ${CONFIG_FILE}.${NC}"
   echo "Please create a 'config' file and set the BASE_PATH variable."
