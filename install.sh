@@ -7,8 +7,8 @@ NC='\033[0m'
 
 # --- Configuration ---
 INSTALL_PATH="$HOME/projects/gemini-launcher"
-SCRIPT_URL="https://raw.githubusercontent.com/your-username/gemini-launcher/main/gemini-launcher.sh"
-CONFIG_URL="https://raw.githubusercontent.com/your-username/gemini-launcher/main/config.example"
+SCRIPT_URL="https://raw.githubusercontent.com/macwilling/gemini-launcher/main/gemini-launcher.sh"
+CONFIG_URL="https://raw.githubusercontent.com/macwilling/gemini-launcher/main/config.example"
 
 # --- Installation Steps ---
 echo "--- MP Gemini Launcher Installer ---"
